@@ -1,16 +1,162 @@
-# React + Vite
+# Pokemon World
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application built using the PokeAPI.
+Users can search Pokemon, view matching search results, explore detailed Pokemon information, and view a random Pokemon card that changes daily.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Features
 
-## React Compiler
+* Search Pokemon by name
+* Auto suggestion while typing
+* Random Pokemon card on homepage
+* Daily random Pokemon using localStorage
+* Search results page
+* Pokemon details page
+* Responsive UI
+* Back button navigation
+* Loading state handling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React JS
+* React Router DOM
+* CSS
+* PokeAPI
+
+---
+
+# API Used
+
+https://pokeapi.co/
+
+---
+
+# Folder Structure
+
+src/
+│
+├── api/
+│   └── poke.js
+│
+├── components/
+│   ├── Card.jsx
+│   ├── SearchBox.jsx
+│   ├── Top.jsx
+│   └── Wait.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Result.jsx
+│   └── FullInfo.jsx
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+
+---
+
+# Installation
+
+Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPO_LINK
+```
+
+Move inside project folder
+
+```bash
+cd pokemon-world
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start development server
+
+```bash
+npm run dev
+```
+
+---
+
+# Build Project
+
+```bash
+npm run build
+```
+
+---
+
+# Main Functionalities
+
+## 1. Search Pokemon
+
+Users can search Pokemon by typing names in the search box.
+
+Example:
+
+* pikachu
+* charizard
+* bulbasaur
+
+---
+
+## 2. Search Suggestions
+
+While typing, matching Pokemon suggestions appear automatically.
+
+---
+
+## 3. Daily Pokemon Card
+
+Homepage shows a random Pokemon card.
+
+* Changes every day
+* Does not change on refresh
+* Stored using localStorage
+
+---
+
+## 4. Pokemon Details
+
+Details page displays:
+
+* Name
+* Image
+* Height
+* Weight
+* Experience
+* Abilities
+* Types
+
+---
+
+# Deployment
+
+The project can be deployed using:
+
+* Vercel
+* Netlify
+
+---
+
+# Future Improvements
+
+* Dark mode
+* Pokemon type filter
+* Pagination
+* Favorites feature
+* Better animations
+
+---
+
+# Author
+
+Akash Pandit
