@@ -1,0 +1,280 @@
+/* MAIN CARD */
+
+.infoCard{
+
+  width: 900px;
+
+  min-height: 560px;
+
+  background:
+  rgba(255,255,255,0.75);
+
+  border-radius: 30px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  position: relative;
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* BACK BUTTON */
+
+.topArea{
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-start;
+}
+
+.backBtn{
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+  linear-gradient(
+    to right,
+    #ef4444,
+    #f97316
+  );
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+/* IMAGE */
+
+.imgBox{
+
+  margin-top: 10px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.imgBox img{
+
+  width: 220px;
+  height: 220px;
+
+  object-fit: contain;
+
+  transition: 0.4s;
+}
+
+.imgBox img:hover{
+
+  transform:
+  scale(1.08)
+  rotate(4deg);
+}
+
+/* NAME */
+
+.rightInfo{
+
+  width: 100%;
+
+  text-align: center;
+}
+
+.rightInfo h1{
+
+  font-size: 60px;
+
+  color: #111827;
+
+  text-transform: capitalize;
+
+  margin-top: 10px;
+
+  margin-bottom: 15px;
+}
+
+/* ID */
+
+.idBox{
+
+  margin-bottom: 18px;
+}
+
+.idBox span{
+
+  background: #111827;
+
+  color: white;
+
+  padding: 9px 18px;
+
+  border-radius: 20px;
+
+  font-size: 15px;
+}
+
+/* TYPE */
+
+.typeRow{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 30px;
+}
+
+.typeRow span{
+
+  padding: 9px 16px;
+
+  border-radius: 20px;
+
+  background:
+  linear-gradient(
+    to right,
+    #2563eb,
+    #7c3aed
+  );
+
+  color: white;
+
+  font-size: 13px;
+}
+
+/* INFO GRID */
+
+.insideInfo{
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap: 18px;
+}
+
+/* INFO CARD */
+
+.infoLine{
+
+  background:
+  rgba(255,255,255,0.9);
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,0.08);
+}
+
+.infoLine strong{
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 17px;
+
+  color: #111827;
+}
+
+.infoLine p{
+
+  font-size: 24px;
+
+  color: #444;
+}
+
+/* ABILITY */
+
+.skillBox{
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.skillBox span{
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  padding: 8px 14px;
+
+  border-radius: 14px;
+
+  font-size: 13px;
+}
+
+/* STATS */
+
+.statsBox{
+
+  width: 100%;
+
+  margin-top: 35px;
+}
+
+.statsBox h2{
+
+  text-align: center;
+
+  margin-bottom: 22px;
+
+  font-size: 36px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width:950px){
+
+  .infoCard{
+
+    width: 100%;
+  }
+
+  .insideInfo{
+
+    grid-template-columns: 1fr;
+  }
+
+  .rightInfo h1{
+
+    font-size: 42px;
+  }
+
+  .imgBox img{
+
+    width: 180px;
+    height: 180px;
+  }
+
+}

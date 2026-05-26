@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { getAllPokemon } from '../api/poke'
-import Wait from '../controller/Wait'
-import Card from '../controller/Card'
+import Card from '../components/Card'
+import Wait from '../components/Wait'
 
+import { getAllPokemon } from '../api/poke'
 
 function Result() {
 
@@ -14,10 +14,10 @@ function Result() {
   const [load, setLoad] = useState(true)
 
   useEffect(() => {
-    loadPokemon()
+    getPokemon()
   }, [name])
 
-  const loadPokemon = async () => {
+  const getPokemon = async () => {
 
     try {
 
@@ -65,14 +65,23 @@ function Result() {
         Search Result
       </h1>
 
+      {
+        allData.length === 0 && (
+
+          <h2 className='notFound'>
+            No Pokemon Found
+          </h2>
+
+        )
+      }
+
       <div className='resultGrid'>
 
         {
           allData.map((item) => (
-            <Card
-              key={item.id}
-              item={item}
-            />
+
+            <Card  key={item.id} item={item} />
+
           ))
         }
 

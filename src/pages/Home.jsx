@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react'
 
+import SearchBox from '../components/SearchBox'
+import Card from '../components/Card'
+import Wait from '../components/Wait'
+import '../style/Home.css'
+import '../style/Search.css'
+import '../style/Card.css'
+import '../style/FullInfo.css'
+import { getPokemon } from '../api/poke'
 
-import { oneById } from '../api/poke'
-import Top from '../controller/Top'
-import SearchBox from '../controller/SearchBox'
-import Card from '../controller/Card'
-import Wait from '../controller/Wait'
 
 function Home() {
 
-  const [todayCard, setTodayCard] = useState(null)
+  const [todayData, setTodayData] = useState(null)
   const [load, setLoad] = useState(true)
 
   useEffect(() => {
@@ -22,7 +25,7 @@ function Home() {
 
     if(oldDate === nowDate && oldData){
 
-      setTodayCard(JSON.parse(oldData))
+      setTodayData(JSON.parse(oldData))
 
       setLoad(false)
 
@@ -30,20 +33,20 @@ function Home() {
 
     }
 
-    getTodayPokemon()
+    getRandomPokemon()
 
   }, [])
 
-  const getTodayPokemon = async () => {
+  const getRandomPokemon = async () => {
 
     try {
 
       const randomId =
         Math.floor(Math.random() * 500) + 1
 
-      const data = await oneById(randomId)
+      const data = await getPokemon(randomId)
 
-      setTodayCard(data)
+      setTodayData(data)
 
       localStorage.setItem(
         'poke-date',
@@ -71,7 +74,15 @@ function Home() {
 
     <div className='mainBox'>
 
-      <Top />
+      <div className='topBox'>
+
+        <h1>Pokemon World</h1>
+
+        <p>
+          Search and explore pokemon
+        </p>
+
+      </div>
 
       <SearchBox />
 
@@ -84,7 +95,9 @@ function Home() {
           ?
           <Wait />
           :
-          todayCard && <Card item={todayCard} />
+          todayData && (
+            <Card item={todayData} />
+          )
         }
 
       </div>

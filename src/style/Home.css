@@ -1,0 +1,50 @@
+/* HOME PAGE */
+
+.mainBox{
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* TOP SECTION */
+
+.topBox{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.topBox h1{
+  font-size: 78px;
+  font-weight: 900;
+
+  background:
+  linear-gradient(
+    to right,
+    #2563eb,
+    #7c3aed,
+    #ec4899
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 15px;
+}
+
+.topBox p{
+  font-size: 22px;
+  color: #4b5563;
+}
+
+/* DAILY */
+
+.dailyBox{
+  margin-top: 70px;
+  text-align: center;
+}
+
+.dailyBox h2{
+  font-size: 45px;
+  margin-bottom: 35px;
+  color: #111827;
+}

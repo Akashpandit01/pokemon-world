@@ -1,0 +1,34 @@
+/* LOADER */
+
+.waitBox{
+  text-align: center;
+}
+
+.loader{
+
+  width: 70px;
+  height: 70px;
+
+  border: 7px solid #ddd;
+
+  border-top: 7px solid #7c3aed;
+
+  border-radius: 50%;
+
+  margin: auto;
+
+  animation: spin 1s linear infinite;
+}
+
+.waitBox h2{
+  margin-top: 18px;
+  color: #444;
+}
+
+@keyframes spin{
+
+  100%{
+    transform: rotate(360deg);
+  }
+
+}

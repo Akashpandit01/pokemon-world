@@ -1,0 +1,123 @@
+/* CARD */
+
+.cardBox{
+
+  background:
+  rgba(255,255,255,0.65);
+
+  padding: 30px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.12);
+
+  transition: 0.4s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.cardBox:hover{
+
+  transform:
+  translateY(-10px)
+  scale(1.02);
+}
+
+.cardBox img{
+
+  width: 230px;
+  height: 230px;
+
+  object-fit: contain;
+
+  transition: 0.5s;
+}
+
+.cardBox img:hover{
+
+  transform:
+  rotate(6deg)
+  scale(1.1);
+}
+
+.cardBox h2{
+
+  margin-top: 20px;
+
+  font-size: 38px;
+
+  text-transform: capitalize;
+
+  color: #111827;
+}
+
+.cardBox p{
+
+  margin-top: 12px;
+
+  color: #444;
+
+  font-size: 17px;
+}
+
+/* TYPE */
+
+.typeRow{
+
+  margin-top: 18px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.typeRow span{
+
+  padding: 9px 18px;
+
+  border-radius: 20px;
+
+  background:
+  linear-gradient(
+    to right,
+    #2563eb,
+    #7c3aed
+  );
+
+  color: white;
+
+  text-transform: capitalize;
+}
+
+/* BUTTON */
+
+.infoBtn{
+
+  margin-top: 25px;
+
+  padding: 14px 24px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background:
+  linear-gradient(
+    to right,
+    #ec4899,
+    #7c3aed
+  );
+
+  color: white;
+
+  cursor: pointer;
+}
